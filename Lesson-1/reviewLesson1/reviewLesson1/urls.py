@@ -22,4 +22,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index),
     path('first/', include('first.urls')),
+
+    #url with params
+    path('<int:input>/', views.categoryPost),
+
 ]
