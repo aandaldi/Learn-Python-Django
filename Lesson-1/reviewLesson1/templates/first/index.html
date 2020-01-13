@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>First</title>
+</head>
+<body>
+<h3>FIRST</h3>
+<ul> NEWS
+    {% for post in Posts%}
+    <li>
+        <h2>{{post.title}}</h2>
+        <p>{{post.body}}</p>
+    </li>
+    {% endfor %}
+</ul>
+</body>
