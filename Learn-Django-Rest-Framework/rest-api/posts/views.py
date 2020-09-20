@@ -13,7 +13,7 @@ class PostList(generics.ListCreateAPIView):
         if self.request.method == 'POST':
             return PostSerializer
 
-        PostSerializer
+        return PostSerializer
 
 class PostDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Post.objects.all()
