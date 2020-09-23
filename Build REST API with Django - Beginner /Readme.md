@@ -57,4 +57,9 @@ In the Above sample api view:
 
 *you can see this ***views*** code on `views.py` profile_api directory, and you try to get on browser `<host>:<port>/api/hello-view/` to see the view response
 
- 
+
+### SERIALIZERS    
+
+1. First we create serializers for `hello-view` on `serializers.py`
+    - you can see the `serializers.py` for see how to create simple serializer and `views.py` post for the implement serializer for response view
+    
