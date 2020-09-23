@@ -24,5 +24,37 @@
 1. create super user on db `./manage.py createsuperuser` and follow the instruction for create new super user
 1. run the server and can access the Django Admin Page on `<host>:<port>/admin` with the superuser
 1. allow to manage the objects from model with register the model on admin site with `admin.site.register(<model>)` on admin.py in app directory
-1. 
+
+
+## API VIEWS
+In the Above sample api view:
+~~~
+    from rest_framework.views import APIView
+    from rest_framework.response import Response
+    
+    
+    class HelloAPIView(APIView):
+        """ Test API View """
+    
+        def get(self, request, format=None):
+            """Returns a list of APIView features"""
+            an_apiview = [
+                'Uses HTTP mehtods as function (get, post, patch, put, delete)',
+                'Is similar to a tradition Django View',
+                'Give otu the most control over you application logic',
+                'Is mapped manually to URLs',
+            ]
+    
+            return Response({
+                'message': 'Hello!',
+                'an_apiview': an_apiview
+            })
+~~~
+
+- To see my views, we need to register the views on url.
+    1. Include app urls in project urls,
+    1. register the endpoint of views on app urls.
+
+*you can see this ***views*** code on `views.py` profile_api directory, and you try to get on browser `<host>:<port>/api/hello-view/` to see the view response
+
  
