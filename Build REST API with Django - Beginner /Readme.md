@@ -58,8 +58,18 @@ In the Above sample api view:
 *you can see this ***views*** code on `views.py` profile_api directory, and you try to get on browser `<host>:<port>/api/hello-view/` to see the view response
 
 
-### SERIALIZERS    
+### SERIALIZERS AND VIEWS
 
 1. First we create serializers for `hello-view` on `serializers.py`
     - you can see the `serializers.py` for see how to create simple serializer and `views.py` post for the implement serializer for response view
-    
+2. Create simple http method on `view.py` and give the response of helloview
+
+### VIEWSET
+1. import package viewset from rest_framework
+1. create new class with viewset as parent.
+1. import DefaultRouter from rest_fromework
+1. create router variable with the value is Instance of DefaultRoter
+1. add path in `urlpatterns` with the value is include of router.urls
+1. test with `<host>:<port>/api`
+1. create http method for viewset
+1. 
