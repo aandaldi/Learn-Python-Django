@@ -72,4 +72,22 @@ In the Above sample api view:
 1. add path in `urlpatterns` with the value is include of router.urls
 1. test with `<host>:<port>/api`
 1. create http method for viewset
-1. 
+
+
+### DESAIN YOUR API
+1. desain url path
+
+steps:
+- create serializer for validate model api.
+    - create Meta class with value (model, fields)
+    - you using another rule in Meta class
+- create viewset for access serializer in endpoint
+- register the viewset in router on `urls.py` file and test your app.
+
+2. create persmission class
+    - create permission class on new file, call with `permissions.py`, you can see the code on the file
+
+3. add authentication and permissions to ViewSet
+    - import `TokenAuthentication` from `rest_framework` abd file `permissions` on views
+    - create authentication_classes variable
+    - dont forget, the authentication must be tuple value 
