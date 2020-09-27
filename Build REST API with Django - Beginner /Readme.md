@@ -91,3 +91,9 @@ steps:
     - import `TokenAuthentication` from `rest_framework` abd file `permissions` on views
     - create authentication_classes variable
     - dont forget, the authentication must be tuple value 
+
+4. Search Profile Feature
+    - import `filters` from `rest_framework`
+    - create variable `filter_backend` with value `filters.SearchFilter` and `search_fields`, with value of keyword want to search.
+    
+    Note: You can't use filter feature view on diffrent application, the filter works on the url GET parameter for request.
